@@ -7,9 +7,11 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.location.dto.venue.VenueDetails;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -20,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "referralId",
     "hasPerk"
 })
+@JsonIgnoreProperties(value = { "referralId", "hasPerk" })
 public class Venue implements Serializable {
 
 	@JsonProperty("id")
@@ -37,6 +40,18 @@ public class Venue implements Serializable {
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 	private final static long serialVersionUID = -5885686674876821174L;
+	@JsonProperty("venueDetails")
+	private VenueDetails venueDetails;
+
+	@JsonProperty("venueDetails")
+	public VenueDetails getVenueDetails() {
+		return venueDetails;
+	}
+
+	@JsonProperty("venueDetails")
+	public void setVenueDetails(VenueDetails venueDetails) {
+		this.venueDetails = venueDetails;
+	}
 
 	/**
 	 * No args constructor for use in serialization
