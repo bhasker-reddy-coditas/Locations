@@ -17,7 +17,7 @@ https://developer.foursquare.com/places-api
 
 ## Build the project
 To build the application run:
-mvnw clean package
+<pre> mvnw clean package </pre>
 
 ## Run
 Run the application with the following command:
