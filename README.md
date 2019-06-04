@@ -15,6 +15,14 @@ Spring Boot Reference Guide https://docs.spring.io/spring-boot/docs/2.1.5.RELEAS
 Used Foursquare Places API to Search location and fetch Location information
 https://developer.foursquare.com/places-api
 
+## Build the project
+To build the application run:
+mvnw clean package
+
 ## Run
-Run the application with the following command
-<pre> mvn spring-boot:run </pre>
+Run the application with the following command:
+<pre> mvn spring-boot:run </pre>  OR 
+<pre> java -jar target/Locations-0.0.1-SNAPSHOT.war </pre> 
+## Testing
+To launch your application's tests, run:
+<pre> mvnw clean test </pre>
