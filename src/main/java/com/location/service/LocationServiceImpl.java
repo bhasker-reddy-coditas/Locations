@@ -18,6 +18,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
@@ -31,13 +32,9 @@ public class LocationServiceImpl implements LocationService {
 
 	private static final Logger log = LoggerFactory.getLogger(LocationServiceImpl.class);
 
-	private static Environment environment;
+	@Autowired
+	private Environment environment;
 	
-	public LocationServiceImpl(Environment env) {
-		super();
-		environment = env;
-	}
-
 	/**
 	 * Helper method to form URL and create HttpGet instance
 	 * 
