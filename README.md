@@ -45,7 +45,12 @@ https://developer.foursquare.com/docs/api/venues/details </pre>
           }
         ]
       }
-    }  
+    }
+    
+* **Failure Response:**
+    * **Code:** 400 Bad Request <br/>
+    * **Code:** 500 Internal Server error <br/>
+
 ## Prerequisites
 Softwares needs to be installed
   - Java 1.8
